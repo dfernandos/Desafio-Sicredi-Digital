@@ -65,5 +65,10 @@ public class HomePageSteps {
         }
     }
 
+    public boolean validateValues(SimulationValues simulationValues){
+        return Integer.parseInt(simulationValues.getValorAplicar())>2000 &&
+                Integer.parseInt(simulationValues.getValorInvestir())>2000;
+    }
+
 
 }
