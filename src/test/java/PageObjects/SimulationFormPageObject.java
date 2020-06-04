@@ -17,4 +17,9 @@ public class SimulationFormPageObject {
         WaitElementManager.visibilityOfElementLocated(driver, By.className("valor"));
         return driver.findElement(By.className("valor"));
     }
+
+    public WebElement getMoreOptionsMessege(){
+        WaitElementManager.visibilityOfElementLocated(driver, By.xpath(".//span[text()='Veja estas outras opções para você']"));
+        return driver.findElement(By.xpath(".//span[text()='Veja estas outras opções para você']"));
+    }
 }
