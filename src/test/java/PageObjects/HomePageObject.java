@@ -1,9 +1,12 @@
 package PageObjects;
 
 import Utils.WaitElementManager;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class HomePageObject {
 
@@ -28,10 +31,20 @@ public class HomePageObject {
         return driver.findElement(By.id("tempo"));
     }
 
-    public WebElement getSimularButton(){
+    public SimulationFormPageObject getSimularButton(){
         WaitElementManager.visibilityOfElementLocated(driver, By.className("simular"));
-        return driver.findElement(By.className("simular"));
+        driver.findElement(By.className("simular")).submit();
+        return new SimulationFormPageObject(driver);
     }
 
+    public WebElement getValorAplicarErro(){
+        WaitElementManager.visibilityOfElementLocated(driver, By.id("valorAplicar-error"));
+        return driver.findElement(By.id("valorAplicar-error"));
+    }
+
+    public WebElement getvalorInvestirErro(){
+        WaitElementManager.visibilityOfElementLocated(driver, By.id("valorInvestir-error"));
+        return driver.findElement(By.id("valorInvestir-error"));
+    }
 
 }
