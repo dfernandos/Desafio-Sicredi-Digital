@@ -78,5 +78,4 @@ public class HomePageSteps {
                 Integer.parseInt(simulationValues.getValorInvestir())>=2000;
     }
 
-
 }
