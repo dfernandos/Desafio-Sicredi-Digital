@@ -29,8 +29,8 @@ public class HomePageObject {
     }
 
     public WebElement getSimularButton(){
-        WaitElementManager.visibilityOfElementLocated(driver, By.className("btn btnAmarelo btnSimular"));
-        return driver.findElement(By.className("btn btnAmarelo btnSimular"));
+        WaitElementManager.visibilityOfElementLocated(driver, By.className("simular"));
+        return driver.findElement(By.className("simular"));
     }
 
 
