@@ -1,6 +1,7 @@
 package Steps;
 
 import PageObjects.SimulationFormPageObject;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 public class SimulationFormSteps {
@@ -15,5 +16,13 @@ public class SimulationFormSteps {
 
     public String getTotalAmount(){
         return simulationFormPageObject.getValorField().getText();
+    }
+
+    public String getMoreOptionsMessage(){
+        return simulationFormPageObject.getMoreOptionsMessege().getText();
+    }
+
+    public void validateMoreOptionsMessage(String message){
+        Assert.assertEquals("Veja estas outras opções para você", message);
     }
 }
