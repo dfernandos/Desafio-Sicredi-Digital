@@ -35,21 +35,39 @@ public class TestCaseSimulation {
 
     @Test
     public void fillSimulationFormTest(){
+
+        //Dado que o usuário está no site de simulação de investimento
         HomePageSteps homePageSteps = new HomePageSteps(driver);
+
+        //E o usuário insere dados  válidos no sistema
         SimulationValues simulationValues = homePageSteps.createSimulationValues();
         homePageSteps.fillSimulationForm(simulationValues);
+
+        //Quando o os dados forem enviados
         SimulationFormSteps simulationFormSteps = homePageSteps.submitSimularButton();
+
+        //Então o usuário acessa o valor do seu investimento
         String totalAmount = simulationFormSteps.getTotalAmount();
         Assert.assertEquals(totalAmount, "R$ 2.206");
+
+        //E acessa a tabela de investimento
         String message = simulationFormSteps.getMoreOptionsMessage();
         simulationFormSteps.validateMoreOptionsMessage(message);
     }
 
     @Test
     public void fillSimulationFormTestIncorrectly(){
+
+        //Dado que o usuário está no site de simulação de investimento
         HomePageSteps homePageSteps = new HomePageSteps(driver);
+
+        //E o usuário insere dados  inválidos no sistema
         SimulationValues simulationValues = homePageSteps.createSimulationIncorrectValue();
+
+        //Quando o sistema validar o campo
         homePageSteps.fillSimulationForm(simulationValues);
+
+        //Então o sistema mostra uma mensagem informando que o valor está incorreto
         List<String> message = homePageSteps.getErrorMessages();
         homePageSteps.validateErrorMessage(message);
     }
