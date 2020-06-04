@@ -18,6 +18,8 @@ public class TestApiGet {
         response = RestAssured.given().when().get(ENDPOINT);
     }
 
+    //valida se o status code da requisição é 200
+    //Imprime o retorno da requisição
     @Test
     public void validateStatusCode(){
         response.
@@ -25,16 +27,19 @@ public class TestApiGet {
         response.body().prettyPrint();
     }
 
+    //Valida se o Id do Json body é 1
     @Test
     public void validateIdReturn(){
         response.then().body("id", Matchers.is(1));
     }
 
+    //Validade se o campo meses do Json body corresponde a "112", "124", "136", "148"
     @Test
     public void validateMonthsReturn(){
         response.then().body("meses", Matchers.equalTo(Arrays.asList("112", "124", "136", "148")));
     }
 
+    //Valida de o campo valor do Json Body corresponde a "2.802", "3.174", "3.564", "3.971"
     @Test
     public void validateAmontReturn(){
         response.then().body("valor", Matchers.equalTo(Arrays.asList("2.802", "3.174", "3.564", "3.971")));
