@@ -47,4 +47,13 @@ public class TestCaseSimulation {
         String totalAmount = simulationFormSteps.getTotalAmount();
         Assert.assertEquals(totalAmount, "R$ 2.206");
     }
+
+    @Test
+    public void fillSimulationFormTestIncorrectly(){
+        HomePageSteps homePageSteps = new HomePageSteps(driver);
+        SimulationValues simulationValues = homePageSteps.createSimulationIncorrectValue();
+        homePageSteps.fillSimulationForm(simulationValues);
+        List<String> message = homePageSteps.getErrorMessages();
+        homePageSteps.validateErrorMessage(message);
+    }
 }
