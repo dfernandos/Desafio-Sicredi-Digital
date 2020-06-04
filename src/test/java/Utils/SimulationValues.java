@@ -2,13 +2,13 @@ package Utils;
 
 import java.util.Objects;
 
-public class Simulator {
+public class SimulationValues {
 
     private String valorAplicar;
     private String valorInvestir;
     private String tempo;
 
-    public Simulator(String valorAplicar, String valorInvestir, String tempo) {
+    public SimulationValues(String valorAplicar, String valorInvestir, String tempo) {
         this.valorAplicar = valorAplicar;
         this.valorInvestir = valorInvestir;
         this.tempo = tempo;
@@ -41,11 +41,11 @@ public class Simulator {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Simulator)) return false;
-        Simulator simulator = (Simulator) o;
-        return Objects.equals(getValorAplicar(), simulator.getValorAplicar()) &&
-                Objects.equals(getValorInvestir(), simulator.getValorInvestir()) &&
-                Objects.equals(getTempo(), simulator.getTempo());
+        if (!(o instanceof SimulationValues)) return false;
+        SimulationValues simulationValues = (SimulationValues) o;
+        return Objects.equals(getValorAplicar(), simulationValues.getValorAplicar()) &&
+                Objects.equals(getValorInvestir(), simulationValues.getValorInvestir()) &&
+                Objects.equals(getTempo(), simulationValues.getTempo());
     }
 
     @Override
