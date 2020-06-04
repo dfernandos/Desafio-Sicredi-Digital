@@ -1,4 +1,4 @@
-package TestCase;
+package br.com.sicredi.testCase;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
