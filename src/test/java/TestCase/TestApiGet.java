@@ -25,4 +25,9 @@ public class TestApiGet {
         response.body().prettyPrint();
     }
     
+    @Test
+    public void validateIdReturn(){
+        response.then().body("id", Matchers.is(1));
+    }
+
 }
