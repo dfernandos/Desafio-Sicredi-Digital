@@ -43,5 +43,4 @@ public class HomePageObject {
         WaitElementManager.visibilityOfElementLocated(driver, By.id("valorInvestir-error"));
         return driver.findElement(By.id("valorInvestir-error"));
     }
-
 }
