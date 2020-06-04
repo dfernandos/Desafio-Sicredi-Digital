@@ -34,4 +34,9 @@ public class TestApiGet {
     public void validateMonthsReturn(){
         response.then().body("meses", Matchers.equalTo(Arrays.asList("112", "124", "136", "148")));
     }
+
+    @Test
+    public void validateAmontReturn(){
+        response.then().body("valor", Matchers.equalTo(Arrays.asList("2.802", "3.174", "3.564", "3.971")));
+    }
 }
