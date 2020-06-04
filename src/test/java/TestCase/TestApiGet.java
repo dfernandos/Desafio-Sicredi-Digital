@@ -24,10 +24,14 @@ public class TestApiGet {
                 then().statusCode(200);
         response.body().prettyPrint();
     }
-    
+
     @Test
     public void validateIdReturn(){
         response.then().body("id", Matchers.is(1));
     }
 
+    @Test
+    public void validateMonthsReturn(){
+        response.then().body("meses", Matchers.equalTo(Arrays.asList("112", "124", "136", "148")));
+    }
 }
