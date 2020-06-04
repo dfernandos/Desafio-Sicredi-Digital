@@ -12,6 +12,7 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 * Maven
 * Rest Assured 4.3.0
 * Junit 4.13
+* Selenium 3.141.59
 * Google Chrome
 
 # Executar testes
@@ -28,7 +29,31 @@ Desenvolver automação de teste para o processo de simulação de investimento.
     3.1 Existem dois testes case. Um represetando o teste de API e outro para o teste de interface.  
 4. Criei um pacote com utils.
     4.1 Nele existem duas classes, uma que gerencia o WaitElement, e outra que representa os dados da simulação.
+    
+# Cenários de Teste Interface
 
+    Cenário 1: Usuário simula investimento com dados  válidos
+    
+    Dado que o usuário está no site de simulação de investimento
+    E o usuário insere dados  válidos no sistema
+    Quando o os dados forem enviados
+    Então o usuário acessa o valor do seu investimento
+    E acessa a tabela de investimento
+    
+    Cenário 2: Usuário simula investimento com valores inválidos
+    
+    Dado que o usuário está no site de simulação de investimento
+    E o usuário insere valores inválidos no sistema
+    Quando o sistema validar o campo
+    Então o sistema mostra uma mensagem informando que o valor está incorreto
+    
+# Cenário de Teste API
+
+    Cenário: Usuário busca simulação
+    Dado que o usuário faça a simulação
+    Quando o serviço é consultado
+    Então é retornado o Id, valores e meses
+    
 # Nota
 
 Para executar o teste de serviço, quebrei teste por teste para facilitar a análise do  código. 
