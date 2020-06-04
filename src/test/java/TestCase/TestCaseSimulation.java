@@ -1,7 +1,5 @@
 package TestCase;
 
-import PageObjects.HomePageObject;
-import PageObjects.SimulationFormPageObject;
 import Steps.HomePageSteps;
 import Steps.SimulationFormSteps;
 import Utils.SimulationValues;
@@ -12,14 +10,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class TestCaseSimulation {
 
     static WebDriver driver;
-    static HomePageObject homePageObject;
-    static List<SimulationValues> simulationValuesList = new ArrayList<>();
 
     @BeforeClass
     public static void beforeClass() {
@@ -46,6 +41,8 @@ public class TestCaseSimulation {
         SimulationFormSteps simulationFormSteps = homePageSteps.submitSimularButton();
         String totalAmount = simulationFormSteps.getTotalAmount();
         Assert.assertEquals(totalAmount, "R$ 2.206");
+        String message = simulationFormSteps.getMoreOptionsMessage();
+        simulationFormSteps.validateMoreOptionsMessage(message);
     }
 
     @Test

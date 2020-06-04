@@ -5,9 +5,7 @@ import PageObjects.SimulationFormPageObject;
 import Utils.SimulationValues;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import sun.dc.DuctusRenderingEngine;
 
-import java.sql.SQLTransactionRollbackException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +63,6 @@ public class HomePageSteps {
     public List<String> getErrorMessages(){
         return this.errorMessages;
     }
-
 
     public void validateErrorMessage(List<String> messages){
         for(String message: messages){
