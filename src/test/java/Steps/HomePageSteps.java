@@ -34,9 +34,17 @@ public class HomePageSteps {
 
     public void fillSimulationForm(SimulationValues simulationValues){
 
-        homePageObject.getAplicarValorField().sendKeys(simulationValues.getValorAplicar());
-        homePageObject.getvalorInvestirField().sendKeys(simulationValues.getValorInvestir());
-        homePageObject.getTempoField().sendKeys(simulationValues.getTempo());
+        if(validateValues(simulationValues)){
+            homePageObject.getAplicarValorField().sendKeys(simulationValues.getValorAplicar());
+            homePageObject.getvalorInvestirField().sendKeys(simulationValues.getValorInvestir());
+            homePageObject.getTempoField().sendKeys(simulationValues.getTempo());
+        }
+        else{
+            homePageObject.getAplicarValorField().sendKeys(simulationValues.getValorAplicar());
+            homePageObject.getvalorInvestirField().sendKeys(simulationValues.getValorInvestir());
+            homePageObject.getTempoField().sendKeys(simulationValues.getTempo());
+            setErrorMessage();
+        }
     }
 
     public SimulationFormSteps submitSimularButton(){
@@ -66,8 +74,8 @@ public class HomePageSteps {
     }
 
     public boolean validateValues(SimulationValues simulationValues){
-        return Integer.parseInt(simulationValues.getValorAplicar())>2000 &&
-                Integer.parseInt(simulationValues.getValorInvestir())>2000;
+        return Integer.parseInt(simulationValues.getValorAplicar())>=2000 &&
+                Integer.parseInt(simulationValues.getValorInvestir())>=2000;
     }
 
 
