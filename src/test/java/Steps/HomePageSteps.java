@@ -44,5 +44,15 @@ public class HomePageSteps {
         return new SimulationFormSteps(driver, simulationFormPageObject);
     }
 
+    public void setErrorMessage(){
+        String valorAplicarErro  = homePageObject.getValorAplicarErro().getText();
+        String valorInvestirErro = homePageObject.getvalorInvestirErro().getText();
+        List<String> errorMessages = new ArrayList<>();
+        errorMessages.add(valorAplicarErro);
+        errorMessages.add(valorInvestirErro);
+
+        this.errorMessages = errorMessages;
+    }
+
 
 }
