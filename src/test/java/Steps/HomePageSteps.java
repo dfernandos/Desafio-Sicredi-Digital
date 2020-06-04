@@ -54,5 +54,16 @@ public class HomePageSteps {
         this.errorMessages = errorMessages;
     }
 
+    public List<String> getErrorMessages(){
+        return this.errorMessages;
+    }
+
+
+    public void validateErrorMessage(List<String> messages){
+        for(String message: messages){
+            Assert.assertEquals(message, "Valor mínimo de 20.00");
+        }
+    }
+
 
 }
