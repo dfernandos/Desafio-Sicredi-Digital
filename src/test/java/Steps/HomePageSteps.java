@@ -32,5 +32,17 @@ public class HomePageSteps {
         return simulationValues;
     }
 
+    public void fillSimulationForm(SimulationValues simulationValues){
+
+        homePageObject.getAplicarValorField().sendKeys(simulationValues.getValorAplicar());
+        homePageObject.getvalorInvestirField().sendKeys(simulationValues.getValorInvestir());
+        homePageObject.getTempoField().sendKeys(simulationValues.getTempo());
+    }
+
+    public SimulationFormSteps submitSimularButton(){
+        SimulationFormPageObject simulationFormPageObject = homePageObject.getSimularButton();
+        return new SimulationFormSteps(driver, simulationFormPageObject);
+    }
+
 
 }
