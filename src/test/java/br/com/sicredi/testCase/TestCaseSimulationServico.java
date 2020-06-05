@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class TestApiGet {
+public class TestCaseSimulationServico {
 
     private static final String ENDPOINT = "http://5b847b30db24a100142dce1b.mockapi.io/api/v1/simulador";
     private Response response;
