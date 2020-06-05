@@ -2,7 +2,7 @@ package br.com.sicredi.testCase;
 
 import br.com.sicredi.steps.HomePageSteps;
 import br.com.sicredi.steps.SimulationFormSteps;
-import br.com.sicredi.utils.SimulationValues;
+import br.com.sicredi.frameworks.utils.SimulationValues;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.junit.*;

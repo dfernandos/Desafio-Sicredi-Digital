@@ -1,6 +1,6 @@
 package br.com.sicredi.pageObjects;
 
-import br.com.sicredi.utils.WaitElementManager;
+import br.com.sicredi.frameworks.utils.WaitElementManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

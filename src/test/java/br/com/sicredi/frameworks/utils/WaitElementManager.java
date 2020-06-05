@@ -1,4 +1,4 @@
-package br.com.sicredi.utils;
+package br.com.sicredi.frameworks.utils;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

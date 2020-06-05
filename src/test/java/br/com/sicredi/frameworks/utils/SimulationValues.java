@@ -1,4 +1,4 @@
-package br.com.sicredi.utils;
+package br.com.sicredi.frameworks.utils;
 
 import java.util.Objects;
 
