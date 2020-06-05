@@ -7,7 +7,13 @@ Projeto criado para processo seletivo projeto Sicredi.
 Desenvolver automação de teste para o processo de simulação de investimento. 
 
 ```bash
+`Link para teste de UI`
 `https://www.sicredi.com.br/html/ferramenta/simulador-investimento-poupanca/`
+```
+
+```bash
+`API Simulador`
+`http://5b847b30db24a100142dce1b.mockapi.io/api/v1/simulador`
 ```
 
 # Tecnologias
@@ -32,7 +38,7 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 3. Criei um pacote para incluir o testCase. Existem dois testes case. Um represetando o teste de API e outro para o teste de interface.  
 4. Criei um pacote com utils.Nele existem duas classes, uma que gerencia o WaitElement, e outra que representa os dados da simulação.
     
-# Cenários de Teste Interface
+# Cenários de Teste UI
 
     Cenário 1: Usuário simula investimento com dados  válidos
     
