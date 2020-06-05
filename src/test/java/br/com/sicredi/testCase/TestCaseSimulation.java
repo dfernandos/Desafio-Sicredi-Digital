@@ -48,7 +48,7 @@ public class TestCaseSimulation {
 
         //Então o usuário acessa o valor do seu investimento
         String totalAmount = simulationFormSteps.getTotalAmount();
-        Assert.assertEquals(totalAmount, "R$ 2.206");
+        simulationFormSteps.validateTotalAmount(totalAmount);
 
         //E acessa a tabela de investimento
         String message = simulationFormSteps.getMoreOptionsMessage();
