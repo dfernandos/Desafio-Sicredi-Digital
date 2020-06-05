@@ -19,7 +19,7 @@ public class SimulationFormPageObject {
     }
 
     public WebElement getMoreOptionsMessege(){
-        WaitElementManager.visibilityOfElementLocated(driver, By.xpath(".//span[text()='Veja estas outras opções para você']"));
-        return driver.findElement(By.xpath(".//span[text()='Veja estas outras opções para você']"));
+        WaitElementManager.visibilityOfElementLocated(driver, By.cssSelector("div.maisOpcoes span"));
+        return driver.findElement(By.cssSelector("div.maisOpcoes span"));
     }
 }
