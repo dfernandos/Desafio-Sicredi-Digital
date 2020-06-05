@@ -25,4 +25,8 @@ public class SimulationFormSteps {
     public void validateMoreOptionsMessage(String message){
         Assert.assertEquals("Veja estas outras opções para você", message);
     }
+
+    public void validateTotalAmount(String totalAmount){
+        Assert.assertEquals(totalAmount, "R$ 2.206");
+    }
 }
