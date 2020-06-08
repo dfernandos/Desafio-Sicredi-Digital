@@ -1,6 +1,6 @@
 package br.com.sicredi.steps;
 
-import br.com.sicredi.pageObjects.SimulationFormPageObject;
+import br.com.sicredi.pageobjects.SimulationFormPageObject;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 

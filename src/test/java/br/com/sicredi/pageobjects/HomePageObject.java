@@ -1,4 +1,4 @@
-package br.com.sicredi.pageObjects;
+package br.com.sicredi.pageobjects;
 
 import br.com.sicredi.frameworks.utils.WaitElementManager;
 import org.openqa.selenium.By;
