@@ -21,7 +21,6 @@
         </plugins>
     </build>
 
-
     <reporting>
         <plugins>
             <plugin>
@@ -64,10 +63,7 @@
             <version>4.3.0</version>
             <scope>test</scope>
         </dependency>
-
-
+        
     </dependencies>
-
-
 
 </project>
