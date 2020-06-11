@@ -25,10 +25,21 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 * Selenium 3.141.59
 * Google Chrome
 
-# Executar testes
+# Executar todos os testes
 ```bash
 `mvn test`
 ```
+
+# Executar única classe de testes
+```bash
+`mvn -Dtest=NomeDaClasse test`
+```
+
+# Executar único método da classe de testes
+```bash
+`mvn -Dtest=NomeDaClasse#NomeDoMetodo test`
+```
+
 # Origanização do Projeto
 
 1. Criei um pacote para incluir as pageObjects. Foi criado duas pageObjects, uma que representa a tela inicial do site e que contem todos os elementos necessários para ela e outra para representar a segunda tela, que representa a tabela de simulação.
@@ -61,7 +72,12 @@ Desenvolver automação de teste para o processo de simulação de investimento.
     Dado que o usuário faça a simulação
     Quando o serviço é consultado
     Então é retornado o Id, valores e meses
-    
+   
+   
+# Relatórios de testes
+
+Após rodas os testes com alguns dos comandos descritos acima,
+o relatório em HTML será gerado no caminho `target/site`.
 # Nota
 
 Para executar o teste de serviço, quebrei teste por teste para facilitar a análise do  código. 
