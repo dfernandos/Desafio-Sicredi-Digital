@@ -39,6 +39,10 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 ```bash
 `mvn -Dtest=NomeDaClasse#NomeDoMetodo test`
 ```
+# Relatórios de testes
+
+Após rodar os testes com alguns dos comandos descritos acima,
+o relatório em HTML será gerado no caminho `target/site`.
 
 # Origanização do Projeto
 
@@ -73,11 +77,7 @@ Desenvolver automação de teste para o processo de simulação de investimento.
     Quando o serviço é consultado
     Então é retornado o Id, valores e meses
    
-   
-# Relatórios de testes
-
-Após rodas os testes com alguns dos comandos descritos acima,
-o relatório em HTML será gerado no caminho `target/site`.
+  
 # Nota
 
 Para executar o teste de serviço, quebrei teste por teste para facilitar a análise do  código. 
