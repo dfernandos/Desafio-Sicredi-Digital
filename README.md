@@ -41,7 +41,11 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 ```
 ## Relatórios de testes
 
-Após rodar os testes com alguns dos comandos descritos acima,
+Para gerar relatório de test, deve ser executado o comando descrito abaixo:
+```bash
+`mvn surefire-report:report`
+```
+
 o relatório em HTML será gerado no caminho `target/site`.
 
 ## Origanização do Projeto
