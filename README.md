@@ -2,7 +2,7 @@
 
 Projeto criado para processo seletivo projeto Sicredi.
 
-# Descriçao do projeto:
+## Descriçao do projeto:
 
 Desenvolver automação de teste para o processo de simulação de investimento. 
 
@@ -16,7 +16,7 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 `http://5b847b30db24a100142dce1b.mockapi.io/api/v1/simulador`
 ```
 
-# Tecnologias
+## Tecnologias
 
 * Java 8
 * Maven
@@ -25,26 +25,26 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 * Selenium 3.141.59
 * Google Chrome
 
-# Executar todos os testes
+## Executar todos os testes
 ```bash
 `mvn test`
 ```
 
-# Executar única classe de testes
+## Executar única classe de testes
 ```bash
 `mvn -Dtest=NomeDaClasse test`
 ```
 
-# Executar único método da classe de testes
+## Executar único método da classe de testes
 ```bash
 `mvn -Dtest=NomeDaClasse#NomeDoMetodo test`
 ```
-# Relatórios de testes
+## Relatórios de testes
 
 Após rodar os testes com alguns dos comandos descritos acima,
 o relatório em HTML será gerado no caminho `target/site`.
 
-# Origanização do Projeto
+## Origanização do Projeto
 
 1. Criei um pacote para incluir as pageObjects. Foi criado duas pageObjects, uma que representa a tela inicial do site e que contem todos os elementos necessários para ela e outra para representar a segunda tela, que representa a tabela de simulação.
     
@@ -53,7 +53,7 @@ o relatório em HTML será gerado no caminho `target/site`.
 3. Criei um pacote para incluir o testCase. Existem dois testes case. Um represetando o teste de API e outro para o teste de interface.  
 4. Criei um pacote com utils.Nele existem duas classes, uma que gerencia o WaitElement, e outra que representa os dados da simulação.
     
-# Cenários de Teste UI
+## Cenários de Teste UI
 
     Cenário 1: Usuário simula investimento com dados  válidos
     
@@ -70,7 +70,7 @@ o relatório em HTML será gerado no caminho `target/site`.
     Quando o sistema validar o campo
     Então o sistema mostra uma mensagem informando que o valor está incorreto
     
-# Cenário de Teste API
+## Cenário de Teste API
 
     Cenário: Usuário busca simulação
     Dado que o usuário faça a simulação
@@ -78,7 +78,7 @@ o relatório em HTML será gerado no caminho `target/site`.
     Então é retornado o Id, valores e meses
    
   
-# Nota
+## Nota
 
 Para executar o teste de serviço, quebrei teste por teste para facilitar a análise do  código. 
 
