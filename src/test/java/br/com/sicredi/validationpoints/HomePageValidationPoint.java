@@ -1,7 +1,6 @@
 package br.com.sicredi.validationpoints;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 
 import java.util.List;
 
