@@ -4,6 +4,7 @@ import br.com.sicredi.steps.HomePageSteps;
 import br.com.sicredi.steps.SimulationFormSteps;
 import br.com.sicredi.frameworks.utils.SimulationValues;
 import br.com.sicredi.validationpoints.HomePageValidationPoint;
+import br.com.sicredi.validationpoints.SimulationValidationPoint;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.junit.*;
@@ -17,6 +18,7 @@ public class TestCaseSimulationUI {
 
     static WebDriver driver;
     private HomePageValidationPoint homePageValidationPoint;
+    private SimulationValidationPoint simulationValidationPoint;
 
     @BeforeClass
     public static void beforeClass() {
@@ -50,11 +52,12 @@ public class TestCaseSimulationUI {
 
         //Então o usuário acessa o valor do seu investimento
         String totalAmount = simulationFormSteps.getTotalAmount();
-        simulationFormSteps.validateTotalAmount(totalAmount);
+        simulationValidationPoint =  new SimulationValidationPoint();
+        simulationValidationPoint.validateTotalAmount(totalAmount);
 
         //E acessa a tabela de investimento
         String message = simulationFormSteps.getMoreOptionsMessage();
-        simulationFormSteps.validateMoreOptionsMessage(message);
+        simulationValidationPoint.validateMoreOptionsMessage(message);
     }
 
     @Test
