@@ -3,9 +3,11 @@ package br.com.sicredi.steps;
 import br.com.sicredi.pageobjects.HomePageObject;
 import br.com.sicredi.pageobjects.SimulationFormPageObject;
 import br.com.sicredi.frameworks.utils.SimulationValues;
+import jdk.nashorn.internal.codegen.types.NumericType;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,12 +64,6 @@ public class HomePageSteps {
 
     public List<String> getErrorMessages(){
         return this.errorMessages;
-    }
-
-    public void validateErrorMessage(List<String> messages){
-        for(String message: messages){
-            Assert.assertEquals(message, "Valor mínimo de 20.00");
-        }
     }
 
     public boolean validateValues(SimulationValues simulationValues){
