@@ -3,6 +3,7 @@ package br.com.sicredi.testCase;
 import br.com.sicredi.steps.HomePageSteps;
 import br.com.sicredi.steps.SimulationFormSteps;
 import br.com.sicredi.frameworks.utils.SimulationValues;
+import br.com.sicredi.validationpoints.HomePageValidationPoint;
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.junit.*;
@@ -15,6 +16,7 @@ import java.util.List;
 public class TestCaseSimulationUI {
 
     static WebDriver driver;
+    private HomePageValidationPoint homePageValidationPoint;
 
     @BeforeClass
     public static void beforeClass() {
@@ -69,6 +71,7 @@ public class TestCaseSimulationUI {
 
         //Então o sistema mostra uma mensagem informando que o valor está incorreto
         List<String> message = homePageSteps.getErrorMessages();
-        homePageSteps.validateErrorMessage(message);
+        homePageValidationPoint = new HomePageValidationPoint();
+        homePageValidationPoint.validateErrorMessage(message);
     }
 }
