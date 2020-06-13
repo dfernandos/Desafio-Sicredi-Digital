@@ -7,9 +7,7 @@ import java.util.List;
 
 public class HomePageValidationPoint {
 
-    private static String ERROR_MESSAGE = "Valor mínimo de 20.00";
-
-    private WebDriver driver;
+    private static final String ERROR_MESSAGE = "Valor mínimo de 20.00";
 
     public HomePageValidationPoint() {}
 
