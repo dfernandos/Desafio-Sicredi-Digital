@@ -50,12 +50,19 @@ o relatório em HTML será gerado no caminho `target/site`.
 
 ## Origanização do Projeto
 
-1. Criei um pacote para incluir as pageObjects. Foi criado duas pageObjects, uma que representa a tela inicial do site e que contem todos os elementos necessários para ela e outra para representar a segunda tela, que representa a tabela de simulação.
+1. Pacote pageobjects. Foi criado duas pageObjects, uma que representa a tela inicial do site e que contem todos os elementos necessários para ela e outra para representar a segunda tela, que representa a tabela de simulação.
     
-2. Criei um pacote para incluir os Steps. Existem duas classes de steps. Uma que representa os steps relacionados a primeira pageObject e outro representando os steps da segunda pageObject.
+2. Pacote steps. Existem duas classes de steps. Uma que representa os steps relacionados a primeira pageObject e outro representando os steps da segunda pageObject.
 
-3. Criei um pacote para incluir o testCase. Existem dois testes case. Um represetando o teste de API e outro para o teste de interface.  
-4. Criei um pacote com utils.Nele existem duas classes, uma que gerencia o WaitElement, e outra que representa os dados da simulação.
+3. pacpte testcase. Existem dois testes case. Um represetando o teste de API e outro para o teste de interface.
+
+4. Pacote utils.Nele existem duas classes, uma que gerencia o WaitElement, e outra que representa os dados da simulação.
+
+5. Pacote validationpoints. Nele existem duas classes de validações, uma para a tela inicial e outra para  tela simulação. 
+
+6. Pacote suite. Neste pacote, há uma classe que possui todos os testes para runner. 
+
+7 
     
 ## Cenários de Teste UI
 
