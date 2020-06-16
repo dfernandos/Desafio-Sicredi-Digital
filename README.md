@@ -62,7 +62,6 @@ o relatório em HTML será gerado no caminho `target/site`.
 
 6. Pacote suite. Neste pacote, há uma classe que possui todos os testes para runner. 
 
-7 
     
 ## Cenários de Teste UI
 
