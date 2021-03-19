@@ -43,7 +43,7 @@ Desenvolver automação de teste para o processo de simulação de investimento.
 
 Para gerar relatório de test, deve ser executado o comando descrito abaixo:
 ```bash
-`mvn surefire-report:report`
+`mvn clean test site`
 ```
 
 o relatório em HTML será gerado no caminho `target/site`.
